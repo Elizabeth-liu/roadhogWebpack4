@@ -178,11 +178,11 @@ module.exports = {
       context: __dirname,
       manifest: require("./manifest.json")
     }),
-    // new AddAssetHtmlPlugin({
-    //   filepath: require.resolve('./public/lib/vendors.dll.js'),
-    //   includeSourcemap: false,
-    //   hash: true,
-    // }),
+     new AddAssetHtmlPlugin({
+       filepath: require.resolve('./public/lib/vendors.dll.js'),
+       includeSourcemap: false,
+       hash: true,
+    }),
     new webpack.HotModuleReplacementPlugin(), // 调用webpack的热更新插件
     new ManifestPlugin()
     // new BundleAnalyzerPlugin(),
